@@ -37,4 +37,7 @@ Training finished in **`467`** episodes with an average score of **`15.01`** ove
 
 ![Graph][image2]
 
-## Future Improvmentes
+## Future Improvements
+In the future, we could improve experience replay by adding a priority to the experencied samples. Instead of randomly sampling from the replay buffer we then produce a batch of samples that maximizes the TD error delta. The bigger the error, the more the agent can learn from this sample.
+
+Additionally, by manually tweaking hyper-parameters such as **`UPDATE_EVERY`** and **`BATCH_SIZE`** finding an optimal value may be very time consuming. Instead of manually manipulating these parameters, we could create a pipeline that automatically optimizes hyper-parameters.
