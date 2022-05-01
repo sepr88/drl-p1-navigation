@@ -26,7 +26,9 @@ The learning algorithm is implented in the files `Navigation.ipynb` and `dqn_age
 
 ## Deep Q-Learning
 
-Neural Network with RELU activation and x fully connected layers and four outputs - one for each action - 
+The agent uses a Deep Q-Network with RELU activation and two fully conected hidden layers. The final linear output layer of the DQN produces a vector containing the action values for each possible action. From this vector we can choose an action by random or pick the action with the highest action value.
+
+Also, the agent maintains a replay memory and buffers all observed state-action-tuples rather than directly learning during training. Experience replay is used to prevent the action values from oscillating or diverging catastrophically. In order to update the DQN, we sample the replay memory at random every **`4`** time steps and learn from a random batch of **`64`** state-action-tuples to break correlations between consecutive time steps.
 
 ## Results
 
