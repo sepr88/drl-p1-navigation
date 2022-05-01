@@ -1,6 +1,7 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image2]: img/result.png "Graph"
 
 # Report
 
@@ -31,5 +32,9 @@ The agent uses a Deep Q-Network with RELU activation and two fully conected hidd
 Also, the agent maintains a replay memory and buffers all observed state-action-tuples rather than directly learning during training. Experience replay is used to prevent the action values from oscillating or diverging catastrophically. In order to update the DQN, we sample the replay memory at random every **`4`** time steps and learn from a random batch of **`64`** state-action-tuples to break correlations between consecutive time steps.
 
 ## Results
+
+Training finished in **`467`** episodes with an average score of **`15.01`** over the recent **`100`** consecutive episodes.
+
+![Graph][image2]
 
 ## Future Improvmentes
